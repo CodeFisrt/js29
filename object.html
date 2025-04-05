@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <script>
+        var studName = "Chetan";
+        var studCity = "Nagpur";
+        var studEmail = "chetan@gmial.com"
+        var studMobile = "234234324";
+        studMobile =3434;
+        var student = {
+            name: '',
+            city: "",
+            email: "",
+            mobile: ""
+        }
+        student.state = "asdsad"
+        var employee = {
+            name:'aditya',
+            salary:20000,
+            empId:223,
+            designation:"sr sonft eng"
+        }
+        var ecommerceProduct = {
+            productName: 'Moto A2',
+            price: 21340,
+            discount:300,
+            rating:'saS'
+        }
+        console.log(student);
+        console.log(student.email)
+        var empid =  employee.empId;
+        console.log(empid)
+        console.log('before' +student.city)
+        student.city = "Pune";
+        console.log('agter' +student.city)
+        student.city = true;
+        debugger;
+        student.state = "Maharashtra";
+        console.log(student.state)
+
+        var keyName = "designation";
+
+        console.log(employee[keyName])
+        employee['empId'] = 222;
+
+
+        function onSaveStud() {
+            var name = document.getElementById("txtName").value;
+            var emial =  document.getElementById("txtEmail").value;
+            var mobile = document.getElementById("txtMobile").value;
+            var city = document.getElementById("txtCity").value;
+            debugger;
+            if(name.trim() !== "" && emial != '' && mobile !== "" && city !== ""  ) {
+                student.name = name;
+                student.email =  document.getElementById("txtEmail").value;
+                student.mobile =  document.getElementById("txtMobile").value;
+                student.city =  document.getElementById("txtCity").value;
+            } else 
+            {
+                alert("Ennter All Detail")
+            }
+          
+        }
+        function onPrintStudent() {
+            document.getElementById("spanName").innerText = student.name;
+            document.getElementById("spanEmail").innerText =  student.email;
+        }
+        //key field properties
+    </script>
+
+    <div class="row">
+        <div class="col-3">
+            <input type="text" required  minlength="4" placeholder="Name" id="txtName">
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="EMial" id="txtEmail">
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="city" id="txtCity">
+        </div>
+        <div class="col-3">
+            <input type="text" placeholder="mobile" id="txtMobile">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <input type="button" onclick="onSaveStud()" value="Save Student">
+        </div>
+        <div class="col-3">
+            <input type="button" onclick="onPrintStudent()" value="Print Student">
+        </div>
+    </div>
+    <div>
+        <span>Name</span>: <span id="spanName"></span>
+        <span>EMail</span> : <span id="spanEmail"></span>
+    </div>
+    
+</body>
+</html>
