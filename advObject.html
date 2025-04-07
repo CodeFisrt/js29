@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employeeObj = {
+            name: "Chetan",
+            emmpId:"Emp-234",
+            code:234,
+            isActive: false,
+            emailIds: [
+                "chetan@virtusa.com",
+                "chetan@gmail.com"
+            ],
+            contactNo: [
+                '9988776655',
+                '8899889900',
+                '0712-234324'
+            ],
+            officeAddress: {
+                city:"Pune",
+                state:"MH",
+                pincode:"233323",
+                emailList: [
+                    "carePune@virtusa.com",
+                    "infoPune@virtusa.com"
+                ],
+                hrDetail: {
+                    hrNAme:'Anvika',
+                    contactNo:'234234324',
+                    email: 'anivak@visrtu.com'
+                }
+            },
+            homeAddrees: {
+                city:"Nagpur",
+                state: 'Mh',
+                pincode:'33333'
+            }
+        }
+
+        console.log("Hr Name", employeeObj.officeAddress.hrDetail.hrNAme);
+        console.log("2nd emai office",employeeObj.officeAddress.emailList[1])
+        var eCommerceProduct  = {
+            name:"Moto A-2",
+            sku:"A2-112",
+            price: {
+                originalPrice: 12000,
+                dicountedPrice: 10000
+            },
+            images:[
+                "main.jpg",
+                "sideview.jpg"
+            ]
+        }
+    </script>
+</body>
+</html>
